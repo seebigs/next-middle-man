@@ -1,0 +1,27 @@
+{
+  "name": "next-middle-man",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seebigs/next-middle-man.git"
+  },
+  "scripts": {
+    "server": "node ./test/server.js",
+    "test": "jest ./test/specs"
+  },
+  "jest": {
+    "globalSetup": "./test/serverSetup.js",
+    "globalTeardown": "./test/serverTeardown.js"
+  },
+  "dependencies": {
+    "next": "^14.1.4",
+    "path-to-regexp": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.12.7",
+    "@types/react": "18.2.76",
+    "jest": "^29.7.0",
+    "typescript": "5.4.5"
+  }
+}
