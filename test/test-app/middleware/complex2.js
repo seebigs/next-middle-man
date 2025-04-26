@@ -1,11 +1,9 @@
-import { NextResponse } from 'next/server'
-
 export const config = {
-    matcher: ['other/path', '/api/complex/:id/:path*', '/blog/complex/:id/:path*'],
+    matcher: ['other/path', '/api/complex/:id/*path', '/blog/complex/:id/*path'],
 };
 
-export async function middleware(req) {
-    const response = NextResponse.next();
+export function middleware(req) {
+    const response = this.NextResponse.next();
     response.cookies.set({
         name: 'c-demo-mw2',
         value: 'MW2',

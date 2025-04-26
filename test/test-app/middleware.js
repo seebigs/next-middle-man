@@ -5,8 +5,6 @@ import * as complex1 from './middleware/complex1.js';
 import * as complex2 from './middleware/complex2.js';
 import * as complex3 from './middleware/complex3.js';
 
-import { NextResponse } from 'next/server'
-
 export const middleware = nextMiddleMan([
     simpleJson,
     simpleRedirect,

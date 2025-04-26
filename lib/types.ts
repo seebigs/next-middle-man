@@ -11,7 +11,7 @@ export interface MiddlewareRequestMods {
     headers: { name: string, value: string }[]
 }
 
-export type MiddlewareResponse = undefined | null | NextResponse;
+export interface MiddlewareResponse extends NextResponse {}
 
 export interface MiddlewareResponseMods {
     cookies: { name: string, value: string, path?: string }[]
@@ -19,7 +19,7 @@ export interface MiddlewareResponseMods {
 }
 
 export interface MiddlewareHandler {
-    (request: MiddlewareRequest, event: NextFetchEvent): Promise<MiddlewareResponse>;
+    (request: MiddlewareRequest, event: NextFetchEvent): Promise<NextResponse>;
 }
 
 export type MiddlewareMatcherHasItem = {

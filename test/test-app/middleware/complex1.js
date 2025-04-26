@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export const config = {
-    matcher: ['/api/complex/:id/:path*', '/blog/complex/:id/:path*'],
+    matcher: ['/api/complex/:id/*path', '/blog/complex/:id/*path'],
 };
 
 export async function middleware(req) {
