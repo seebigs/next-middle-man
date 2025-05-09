@@ -19,7 +19,7 @@ export interface MiddlewareResponseMods {
 }
 
 export interface MiddlewareHandler {
-    (request: MiddlewareRequest, event: NextFetchEvent): Promise<NextResponse>;
+    (request: MiddlewareRequest, event: NextFetchEvent): Promise<NextResponse> | Promise<void>;
 }
 
 export type MiddlewareMatcherHasItem = {
@@ -40,5 +40,5 @@ export interface MiddlewareConfig {
 
 export interface Middleware {
     middleware: MiddlewareHandler;
-    config: MiddlewareConfig;
+    config?: MiddlewareConfig;
 }
